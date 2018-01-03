@@ -45,6 +45,14 @@ SQL
 DB[:conn].execute(sql)
 end
 
+self.students_below_12th_grade
+sql = <<-SQL
+SELECT COUNT(grade)
+FROM students
+WHERE grade < 9
+SQL
+DB[:conn].execute(sql)
+end
 
 
 
